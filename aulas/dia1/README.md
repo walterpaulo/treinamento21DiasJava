@@ -62,3 +62,30 @@ choco install javaruntime
 ```
 
 obs: Caso o comando "java -version" não apresenta versão do Java será necessário configurar variável de ambiente.
+
+
+### Dependencia Java
+
+#### Maven
+
+```s
+# o.s. Linux
+sudo apt install maven
+```
+
+```s
+# o.s. Windows
+choco install maven
+```
+
+#### Gradle
+
+```s
+# o.s. Linux
+sudo apt install gradle
+```
+
+```s
+# o.s. Windows
+choco install gradle
+```
