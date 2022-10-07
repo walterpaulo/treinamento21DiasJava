@@ -14,11 +14,11 @@ public class App
     {
 	    	Scanner ler = new Scanner(System.in);
 	    	
-	    	/*
-	    	 * Autor: Walter Paulo
-	    	 * Date: 06/10/2022
-	    	 * Exercise: 1 do dia 5 - Desafio 21 dias em Java 
-	    	 */
+    	/*
+    	 * Autor: Walter Paulo
+    	 * Date: 06/10/2022
+    	 * Exercise: 1 do dia 5 - Desafio 21 dias em Java 
+    	 */
 	    	
     	/*
     	 * 
