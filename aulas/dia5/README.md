@@ -1,24 +1,40 @@
-package br.com.unoinfo;
+## Aula 5 - 07/10/2022 - [Desafio 21 dias em Java](../../README.md)
 
-import java.math.BigDecimal;
-import java.text.DecimalFormat;
-import java.util.Scanner;
+### 
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
-    {
-	    	Scanner ler = new Scanner(System.in);
+```s
+
+# Tipos de variáveis
+int inteiro = 5;
+double moeda = 5.99;
+char umCaractere = "D";
+boolean verdadeiroFalso = true;
+String texto = "Hello";
+
+# operacao
+double restoDavisao = 3.5/2;
+
+# resultado na tela
+System.out.println("O resto da divsão é: "+ restoDivisao);
+
+# Operação boolena
+var hojeEstaFrio = false;
+System.out.println("O tempo está frio?: ")+hojeEstaFrio;
+
+
+```
+
+
+## Exercícios 1
+
+```java
+Scanner ler = new Scanner(System.in);
 	    	
-	    	/*
-	    	 * Autor: Walter Paulo
-	    	 * Date: 06/10/2022
-	    	 * Exercise: 1 do dia 5 - Desafio 21 dias em Java 
-	    	 */
+    	/*
+    	 * Autor: Walter Paulo
+    	 * Date: 06/10/2022
+    	 * Exercise: 1 do dia 5 - Desafio 21 dias em Java 
+    	 */
 	    	
     	/*
     	 * 
@@ -43,7 +59,7 @@ public class App
     	 * 
     	 */
     	
-    	System.out.println("=======[ Calculo do Material de Construção ]=============");
+    	System.out.println("=======[ Cálculo do Material de Construção ]=============");
     	System.out.println("Olá João seja muito bem vindo, vamos começar?");
     	System.out.println("Digite o nome do seu Cliente:");
     	var nome = ler.next();
@@ -73,40 +89,5 @@ public class App
     		System.out.println("\nObs: Cliente terá desconto na próxima.");
     	System.out.println("====================================");
     	
-    	
-    	
-    	
-    	/*
-    	 * Exercicio 1
-    	 * João é um professor de matemática e precisa de um programa
-    	 * que faça o calculo da seguinte expressão:
-    	 * 
-    	 * (x * 8 +  y) - x + y / 100
-    	 * 
-    	 * Faça um programa que resolva o problema da expressão que o João
-    	 * precisa.
-    	 */
-        // mostre();
-        // leia()
 
-    	/*
-    	 * Autor: Walter Paulo
-    	 * Date: 06/10/2022
-    	 * Exercise: 1 do dia 4 
-    	 */
-    	
-//	    	System.out.println( "==============[ Bem Vindo ]=============");
-//	    	System.out.println( "Digite o valor de x:");
-//	    	Double x = ler.nextDouble();
-//	    	System.out.println( "Digite o valor de y:");
-//	    	Double y = ler.nextDouble();
-//	    	
-//	    	var calculo = (x * 8 +  y) - x + y / 100;
-//	    	
-//	    	System.out.println( "============================");
-//	    	System.out.println( "O resultado é "+ calculo);
-//	    	System.out.println( "============================");
-    	
-
-    }
-}
+```
