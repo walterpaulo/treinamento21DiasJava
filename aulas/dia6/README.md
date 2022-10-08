@@ -89,7 +89,7 @@ Scanner ler = new Scanner(System.in);
 	    System.out.println("Nome do cliente: "+ nomeDoCliente);
 	    System.out.println("Telefone: "+ telefoneCliente);
 	    System.out.println("\n-----[ Pet ]--------");
-	    System.out.println("Nome do Pet: "+nomeDoCliente);
+	    System.out.println("Nome do Pet: "+nomeDoPet);
 	    System.out.println("Sexo: "+sexoDoPet);
 	    System.out.println("Peso: "+pesoDoPet);
 	    System.out.println("\n---------[ Pagamento ]--------");
