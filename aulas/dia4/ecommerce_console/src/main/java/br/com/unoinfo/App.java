@@ -2,6 +2,8 @@ package br.com.unoinfo;
 
 import java.util.Scanner;
 
+import javax.swing.JOptionPane;
+
 /**
  * Hello world!
  *
@@ -58,5 +60,46 @@ public class App
 		     * Sobraram X litros de agua
 		     * 
 		     */
+	    	
+	    	String MSG_TITULO = "Sistema de Incêndio\n";
+	    	String MENU_PRINCIAPL = "\n\nEscolhe uma opção:\n"
+	    			+ "( 1 ) Digite a quantidade de litros do caminhão\n"
+	    			+ "( 2 ) Histórios\n"
+	    			+ "(sair) Sair\n";
+	    	
+	    	String PERGUNTA_TAMANHO_METRO_FOGO = "\nDigite o tamanho em metro do fogo";
+	    	String PERGUNTA_QUANTIDADE_LITRO = "\nDigite a quantidade de litros do caminhão";
+	    	String MENSAGEM = "";
+	    	
+	    	double tamanhoMetroFogo = 0.0;
+	    	double quantidadeLitro = 0.0;
+	    	
+	    	boolean ocorrencia = true;
+	    	boolean abastecer = true;
+	    	
+	    	do {
+	    		if(ocorrencia) {
+	    			MENSAGEM =  MSG_TITULO;
+	    			MENSAGEM += PERGUNTA_TAMANHO_METRO_FOGO;
+	    			String txttamanhoMetroFogo = JOptionPane.showInputDialog(MENSAGEM);
+	    			ocorrencia = false;
+	    			continue;
+	    			
+	    		}
+	    		if(abastecer) {
+	    			MENSAGEM = MSG_TITULO; 
+	    			MENSAGEM += PERGUNTA_QUANTIDADE_LITRO;
+	    			String quantidaDeListro = JOptionPane.showInputDialog(MENSAGEM);
+	    			quantidadeLitro = Double.parseDouble(quantidaDeListro);
+	    			abastecer = false;
+	    			continue;
+	    		}
+	    		
+	    		String opcao = JOptionPane.showInputDialog(MSG_TITULO += MENU_PRINCIAPL);
+	    		
+	    		if(opcao.toLowerCase().equals("sair"))
+	    			break;
+	    		
+	    	} while(true);
     }
 }
