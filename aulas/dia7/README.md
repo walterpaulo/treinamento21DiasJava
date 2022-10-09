@@ -57,7 +57,7 @@
 
 ```java
 
-	    	Scanner ler = new Scanner(System.in);
+	  public static void main( String[] args ){
 	    
 	    	/*
 	    	 * Autor: Walter Paulo

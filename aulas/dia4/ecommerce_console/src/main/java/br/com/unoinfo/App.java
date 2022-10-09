@@ -12,7 +12,7 @@ public class App
 {
     public static void main( String[] args )
     {
-	    	Scanner ler = new Scanner(System.in);
+//	    	Scanner ler = new Scanner(System.in);
 	    
 	    	/*
 	    	 * Autor: Walter Paulo
