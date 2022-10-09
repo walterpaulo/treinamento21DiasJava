@@ -62,7 +62,7 @@ public class App
 		     */
 	    	
 	    	String MSG_TITULO = "Sistema de Incêndio\n";
-	    	String MENU_PRINCIAPL = "\n\nEscolhe uma opção:\n"
+	    	String MENU_PRINCIPAL = "\n\nEscolhe uma opção:\n"
 	    			+ "( 1 ) Digite a quantidade de litros do caminhão\n"
 	    			+ "( 2 ) Histórios\n"
 	    			+ "(sair) Sair\n";
@@ -71,17 +71,23 @@ public class App
 	    	String PERGUNTA_QUANTIDADE_LITRO = "\nDigite a quantidade de litros do caminhão";
 	    	String MENSAGEM = "";
 	    	
-	    	double tamanhoMetroFogo = 0.0;
-	    	double quantidadeLitro = 0.0;
 	    	
 	    	boolean ocorrencia = true;
 	    	boolean abastecer = true;
 	    	
 	    	do {
+	    		double tamanhoMetroFogo = 0.0;
+	    		double quantidadeLitro = 0.0;
+	    		double quantidadeAguaApaparFogo = 0.0;
+	    		double quantidadeAguaCaminhao = 0.0;
+	    		
+	    		String HISTORICO = "\n Histórico\n\n";
+	    		
 	    		if(ocorrencia) {
 	    			MENSAGEM =  MSG_TITULO;
 	    			MENSAGEM += PERGUNTA_TAMANHO_METRO_FOGO;
 	    			String txttamanhoMetroFogo = JOptionPane.showInputDialog(MENSAGEM);
+	    			tamanhoMetroFogo = Double.parseDouble(txttamanhoMetroFogo);
 	    			ocorrencia = false;
 	    			continue;
 	    			
@@ -95,10 +101,29 @@ public class App
 	    			continue;
 	    		}
 	    		
-	    		String opcao = JOptionPane.showInputDialog(MSG_TITULO += MENU_PRINCIAPL);
 	    		
-	    		if(opcao.toLowerCase().equals("sair"))
+	    		quantidadeAguaApaparFogo = tamanhoMetroFogo / 5;
+	    		quantidadeAguaCaminhao = quantidadeLitro / 5;
+	    		
+	    		if( quantidadeAguaApaparFogo > quantidadeAguaCaminhao) {
+	    			HISTORICO += "Fogo: ACESSO Apagado: "+quantidadeAguaApaparFogo+" Falta: "+(quantidadeAguaApaparFogo - quantidadeAguaCaminhao);
+	    			JOptionPane.showMessageDialog(null, HISTORICO);
+//	    			abastecer = true;
+	    			
+	    		}else if(quantidadeAguaApaparFogo == quantidadeAguaCaminhao) {
+	    			
 	    			break;
+	    		}else {
+	    			
+	    		}
+//	    		JOptionPane.showMessageDialog(null, HISTORICO);
+	    		
+	    		String menu = MSG_TITULO += MENU_PRINCIPAL;
+	    		String opcao = JOptionPane.showInputDialog(menu);
+	    		
+	    		if(opcao.toLowerCase().equals("sair")) {
+	    			break;
+	    		}
 	    		
 	    	} while(true);
     }
