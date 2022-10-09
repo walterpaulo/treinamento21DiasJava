@@ -7,7 +7,7 @@
 			/*
     	 * Autor: Walter Paulo
     	 * Date: 09/10/2022
-    	 * Exercise: Loops do dia 6 - Desafio 21 dias em Java
+    	 * Exercise: Loops do dia 7 - Desafio 21 dias em Java
     	 * 
     	 * 
     	 * 
@@ -88,7 +88,7 @@ Scanner ler = new Scanner(System.in);
     	/*
     	 * Autor: Walter Paulo
     	 * Date: 09/10/2022
-    	 * Example: Loops do dia 6 - Desafio 21 dias em Java 
+    	 * Example: Loops do dia 7 - Desafio 21 dias em Java 
     	 */
 	    	
 	   System.out.println("Digite 's' para entrar no loop");
@@ -123,7 +123,7 @@ Scanner ler = new Scanner(System.in);
     	/*
     	 * Autor: Walter Paulo
     	 * Date: 09/10/2022
-    	 * Example: Loops do dia 6 - Desafio 21 dias em Java
+    	 * Example: Loops do dia 7 - Desafio 21 dias em Java
     	 * do/while: sempre executa a primeira interação. 
     	 */
 	    	
