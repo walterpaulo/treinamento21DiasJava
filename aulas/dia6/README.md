@@ -6,18 +6,17 @@
 
 ```s
  O governo do Brasil está precisando construir uma ponte
- que possibilita a passage de caminhoẽos de um estado a outro,
- a ponte ajudará no transporte de alimentos, e alimentos diversos de brasileiros.
+ que possibilita a passagem de caminhões de um estado a outro,
+ a ponte ajudará no transporte de alimentos, e produtos diversos.
 
  Faça um programa que ajude a calcular o valor total da ponte.
- Para isso você precisa pergutar alguns itens:
+ Para isso você precisa perguntar alguns itens:
 
- - valor pro metro quadrado;
- - total de mentro da ponte;
- - mostrar as opçoes de ferro da fundação da ponte, assim o engenheiro pode escolher
- uma opção, exemplo: ( ferro fundido, Ferro com aço, ferro normal);
- - o valor do ferro varia de acordo com a opção escolhido;
- - no final do relatório mostre o valor total construido;e
+ - valor por metro quadrado;
+ - extensão da ponte(metro);
+ - mostrar os tipos de ferragens para fundação de ponte, assim o engenheiro pode escolher uma opção, exemplo: ferro fundido; ferro de aço; e ferro normal;
+ - o valor do ferro varia de acordo com a opção escolhida;
+ - no final do relatório mostre o valor total construído;e
  - desse valor total contruído, mostrar também que 30% foi adquirido
  com o valor de imposto arracadado sobre a população local;
 
@@ -54,7 +53,7 @@ public static void main( String[] args )
     	menu += "Escolha uma opção:\n ( 1 ) = Orçamento de Ponte;\n ( 0 ) = Sair;\n\n";
     	var menuTipoFerro = "[ Ponte - Governo Federal ]\n\nEscolha uma opção:\n"
     			+ "( 1 ) = Ferro normal ("+taxaFerroNormal+"%);\n"
-    			+ "( 2 ) = Ferro com Aço ("+taxaFerroAcao+"%);\n"
+    			+ "( 2 ) = Ferro de Aço ("+taxaFerroAcao+"%);\n"
     			+ "( 3 ) = Ferro Fundido ("+taxaFerroFundido+"%);\n\n";
     	var msgSair = "Um Governo mais forte para todos!";
     	
@@ -76,7 +75,7 @@ public static void main( String[] args )
         	relatorio += "\nDescrição Técnica\n"
         			+ "Departamento: Infraestrutura\n"
         			+ "Obra: Ponte\n"
-        			+ "Metragem: "+comprimentoPonte+" metro(s)\n"
+        			+ "Extensao: "+comprimentoPonte+" metro(s)\n"
 					+ "Valor por metro: R$ "+moedaBr.format(m2valor)+"\n";
         	
         	String tipoDePonte = "Ferro Fundido";
@@ -87,7 +86,7 @@ public static void main( String[] args )
         	    valorTotal = ( m2valor * comprimento) * (taxaFerroNormal > 0? taxaFerroNormal : 1.0);
         	    break;
         	  case "2":
-        		  tipoDePonte = "Ferro com Aço";
+        		  tipoDePonte = "Ferro de Aço";
         		  valorTotal = ( m2valor * comprimento) * (taxaFerroAcao > 0? taxaFerroAcao : 1.0);
         	    break;
         	  default:
