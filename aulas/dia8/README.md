@@ -1,17 +1,30 @@
-package br.com.unoinfo;
+## Aula 8 - 10/10/2022 - [Desafio 21 dias em Java](../../README.md)
 
-import java.util.Scanner;
+### Exercicios
 
-/**
- * Hello world!
- *
- */
-public class App 
-{
-    public static void main( String[] args )
+* Exercício 1
+```java
+/*
+	    	 * Autor: Walter Paulo
+	    	 * Date: 10/10/2022
+	    	 * Exercise: 1 Loops do dia 8 - Desafio 21 dias em Java
+	    	 * 
+		     */
+			
+			public static void main( String[] args )
     {
-	    
-    	/*
+				var valor = JOptionPane.showInputDialog("Calculadora\nDigite o número:");
+				double valorDouble = Double.parseDouble(valor);
+				String resultado = "Resultado:\n";
+				for (int i = 1; i <= 10; i++) {
+				resultado += valorDouble+ " X "+ i + " = " + i *valorDouble+"\n";
+			}
+				JOptionPane.showMessageDialog(null, resultado);
+		}
+```
+
+```java
+	/*
     	 * Autor: Walter Paulo
     	 * Date: 10/10/2022
     	 * Exercise: 2 Loops do dia 8 - Desafio 21 dias em Java
@@ -30,6 +43,9 @@ public class App
     	 * Digite a quantidade de vezes será multiplicada;
     	 * 
     	 */
+			public static void main( String[] args )
+    {
+	   
     	Scanner ler = new Scanner(System.in);
     	
 	    System.out.println("#".repeat(10) +"[ Calculadora ]"+"#".repeat(10)+"\n\nDigite o número da tabuada");
@@ -38,9 +54,8 @@ public class App
 	    System.out.println("Digite a quantidade de vezes será multiplicada:");
 	    var valorMult = ler.nextInt();
     	for (int i = 1; i <= valorMult; i++) {
-    		System.out.println(valor + " X "+ i + " = " + i *valor+"\n");
-			
+    		System.out.println(valor + " X "+ i + " = " + i *valorMult+"\n");
+			}
 		}
-    }
-    
-}
+
+```
