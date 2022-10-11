@@ -1,5 +1,7 @@
 package br.com.unoinfo;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 /**
@@ -14,33 +16,23 @@ public class App
     	/*
     	 * Autor: Walter Paulo
     	 * Date: 10/10/2022
-    	 * Exercise: 2 Loops do dia 8 - Desafio 21 dias em Java
+    	 * Exercise: 2 Array List do dia 9 - Desafio 21 dias em Java
     	 * 
-	     */
-    	/*
-    	 * Agora que você já sabe trabalhar com  loog e já fez fez o primeiro programa da
-    	 * tabuada, do número 1 ao 10
-    	 * faça um programa para calcular a tabuad, onde o usuário digta a quantidade de
-    	 * números multiplicados
     	 * 
-    	 * usubilidade:
-    	 * Digite o número da tabuada
-    	 * 1
-    	 * 
-    	 * Digite a quantidade de vezes será multiplicada;
+    	 * Faça um programa para armazenar valores (double) em um array
+    	 * no final do programa mostre o resultado da multiplicação dos valares
+    	 * e o resultado da soma dos valores
     	 * 
     	 */
     	Scanner ler = new Scanner(System.in);
-    	
-	    System.out.println("#".repeat(10) +"[ Calculadora ]"+"#".repeat(10)+"\n\nDigite o número da tabuada");
-	    var valor = ler.nextInt();
-	    
-	    System.out.println("Digite a quantidade de vezes será multiplicada:");
-	    var valorMult = ler.nextInt();
-    	for (int i = 1; i <= valorMult; i++) {
-    		System.out.println(valor + " X "+ i + " = " + i *valor+"\n");
-			
-		}
-    }
-    
+    	List<String> nomes = new ArrayList<String>();
+    	for (int i = 1; i <= 5; i++) {
+    		System.out.println("Digite o nome "+i+": ");
+    		nomes.add(ler.next());
+			}
+    	System.out.println("#".repeat(10)+"[ Resultado ]"+"#".repeat(10)+"\n");
+    	for(String nome: nomes) {
+    		System.out.println("Nome: "+nome);
+    	}
+    }    
 }
