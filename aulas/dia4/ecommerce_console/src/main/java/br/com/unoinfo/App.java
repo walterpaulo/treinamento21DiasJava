@@ -43,7 +43,7 @@ public class App
     	
     	do {
 //		Coleta
-    	String[] dados = new String[6];
+    	String[] dados = new String[7];
     	double soma = 0.0;
     	double media = 0.0;
     	System.out.println("Digite o nome do aluno");
@@ -56,6 +56,7 @@ public class App
     	
 //    	Lógica
     	media = soma / 4 ;
+    	dados[6] = String.valueOf(media);
     	if(media >= 7)dados[5] = "Aprovado";
     	else if(media >= 5 && media <= 7)dados[5] = "Recuperação";
     	else dados[5] = "Reprovado";
@@ -75,6 +76,7 @@ public class App
     	for(String[] aluno: alunos) {
     		System.out.println("Nome: "+ aluno[0]+"\n"
     				+ "Notas: "+ aluno[1]+", "+aluno[2]+", "+aluno[3]+", "+aluno[4]+"\n"
+    				+ "Média: "+aluno[6]+"\n"
     				+ "Situação: "+aluno[5]+"\n");
     	}
     	System.out.println("#".repeat(33)+"\n");

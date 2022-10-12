@@ -62,16 +62,16 @@ usados para armazenar vários valores em uma única variável, em vez de declara
 	    }
 	    
 ```
-* Exercício 3
+### Exercício 3
 
 ```java
-			public static void main( String[] args )
+		public static void main( String[] args )
     {
 	    
     	/*
     	 * Autor: Walter Paulo
     	 * Date: 10/10/2022
-    	 * Exercise: 3 Array List do dia 9 - Desafio 21 dias em Java
+    	 * Exercise: 2 Array List do dia 9 - Desafio 21 dias em Java
     	 *
     	 *  Danilo é dono da escola de programação chamada "Torne-se um programador"
 	     * O mesmo está precisando de um sistema para cadastrar os seus alunos
@@ -98,7 +98,7 @@ usados para armazenar vários valores em uma única variável, em vez de declara
     	
     	do {
 //		Coleta
-    	String[] dados = new String[6];
+    	String[] dados = new String[7];
     	double soma = 0.0;
     	double media = 0.0;
     	System.out.println("Digite o nome do aluno");
@@ -111,6 +111,7 @@ usados para armazenar vários valores em uma única variável, em vez de declara
     	
 //    	Lógica
     	media = soma / 4 ;
+    	dados[6] = String.valueOf(media);
     	if(media >= 7)dados[5] = "Aprovado";
     	else if(media >= 5 && media <= 7)dados[5] = "Recuperação";
     	else dados[5] = "Reprovado";
@@ -118,7 +119,7 @@ usados para armazenar vários valores em uma única variável, em vez de declara
 //    	Armazenamento
     	alunos.add(dados);
     	
-//    	adcioção de usuario?
+//    	adcionação?
     	System.out.println("Adicionar novo usuário: \nSim ou Não");
     	String opcao = ler.next();
     	if(opcao.toLowerCase().equals("não")) break;
@@ -130,37 +131,13 @@ usados para armazenar vários valores em uma única variável, em vez de declara
     	for(String[] aluno: alunos) {
     		System.out.println("Nome: "+ aluno[0]+"\n"
     				+ "Notas: "+ aluno[1]+", "+aluno[2]+", "+aluno[3]+", "+aluno[4]+"\n"
+    				+ "Média: "+aluno[6]+"\n"
     				+ "Situação: "+aluno[5]+"\n");
     	}
     	System.out.println("#".repeat(33)+"\n");
     }  
-
 ```
-* Exercício 2
-```java
-/*
-    	 * Autor: Walter Paulo
-    	 * Date: 10/10/2022
-    	 * Exercise: 2 Array List do dia 9 - Desafio 21 dias em Java
-    	 * 
-    	 * 
-    	 * Faça um programa para armazenar valores (double) em um array
-    	 * no final do programa mostre o resultado da multiplicação dos valares
-    	 * e o resultado da soma dos valores
-    	 * 
-    	 */
-    	Scanner ler = new Scanner(System.in);
-    	List<String> nomes = new ArrayList<String>();
-    	for (int i = 1; i <= 5; i++) {
-    		System.out.println("Digite o nome "+i+": ");
-    		nomes.add(ler.next());
-			}
-    	System.out.println("#".repeat(10)+"[ Resultado ]"+"#".repeat(10)+"\n");
-    	for(String nome: nomes) {
-    		System.out.println("Nome: "+nome);
-    	}
-```
-* Exercício 1
+### Exercício 1
 ```java
     
    public static void main( String[] args )
