@@ -42,7 +42,7 @@ public class App
     	List<String[]> alunos = new ArrayList<String[]>();
     	
     	do {
-//		captura de dados do aluno
+//		Coleta
     	String[] dados = new String[6];
     	double soma = 0.0;
     	double media = 0.0;
@@ -52,26 +52,25 @@ public class App
     		System.out.println("Digite a nota "+i+": ");
     		dados[i] = ler.next();
     		soma += Double.parseDouble(dados[i]);
-    		System.out.flush();
     	}
     	
-//    	cálculos
+//    	Lógica
     	media = soma / 4 ;
     	if(media >= 7)dados[5] = "Aprovado";
     	else if(media >= 5 && media <= 7)dados[5] = "Recuperação";
     	else dados[5] = "Reprovado";
     	
-//    	adicionando usuário na lista de alunos
+//    	Armazenamento
     	alunos.add(dados);
     	
-//    	adcionar novo usuário?
+//    	adcionação?
     	System.out.println("Adicionar novo usuário: \nSim ou Não");
     	String opcao = ler.next();
     	if(opcao.toLowerCase().equals("não")) break;
     	
     	}while(true);
     	
-//    	mostra o relatório na tela
+//    	Visualização
     	System.out.println("#".repeat(10)+"[ Relatório ]"+"#".repeat(10));
     	for(String[] aluno: alunos) {
     		System.out.println("Nome: "+ aluno[0]+"\n"
