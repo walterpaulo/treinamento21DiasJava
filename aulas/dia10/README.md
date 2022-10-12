@@ -1,15 +1,18 @@
-package br.com.unoinfo;
+## Aula 10 - 12/10/2022 - [Desafio 21 dias em Java](../../README.md)
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Scanner;
+### Funções
 
-/**
- * Hello world!
- *
- */
-public class App {
-	/*
+Para explicar os conceitos sobre funções, vou resumir nestas linhas em base [SILVA, 2022](https://caffeinealgorithm.com/blog/funcoes-em-java/): 
+    * uma função é um pedaço de código organizado e reutilizável que é usado para executar uma única ação relacionada;
+    * as funções proporcionam uma melhor modularidade e um alto grau de reutilização de código;
+    * não é possível criar uma função dentro de uma outra função.
+		* refatorar os códigos;
+		
+
+####  Refatorando o [exercício 2 do dia 9](../dia9/README.md)
+
+```java
+/*
 	 * Autor: Walter Paulo 
 	 * Date: 10/10/2022 
 	 * Example: 1 funcao dia 10 - Desafio 21 dias em Java
@@ -38,4 +41,5 @@ public class App {
 			System.out.println("Nome: " + nome);
 		}
 	}
-}
+
+```
