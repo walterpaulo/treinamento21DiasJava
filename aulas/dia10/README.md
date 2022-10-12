@@ -3,10 +3,10 @@
 ### Funções
 
 Para explicar os conceitos sobre funções, vou resumir nestas linhas em base [SILVA, 2022](https://caffeinealgorithm.com/blog/funcoes-em-java/): 
-    * uma função é um pedaço de código organizado e reutilizável que é usado para executar uma única ação relacionada;
-    * as funções proporcionam uma melhor modularidade e um alto grau de reutilização de código;
-    * não é possível criar uma função dentro de uma outra função.
-		* refatorar os códigos;
+* uma função é um pedaço de código organizado e reutilizável que é usado para executar uma única ação relacionada;
+* as funções proporcionam uma melhor modularidade e um alto grau de reutilização de código;
+* não é possível criar uma função dentro de uma outra função.
+* refatorar os códigos;
 		
 
 ####  Refatorando o [exercício 2 do dia 9](../dia9/README.md)
