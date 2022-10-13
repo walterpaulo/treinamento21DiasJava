@@ -29,17 +29,20 @@ Para explicar os conceitos sobre funções, vou resumir nestas linhas em base [S
 			System.out.println("Digite o nome " + i + ": ");
 			nomes.add(ler.next());
 		}
+		ler.close();
 		return nomes;
 	}
 
-	public static void main(String[] args) {
-		
-		//chamando a funcao e armazena na variavel nomes
-		List<String> nomes = capturaNomes();
+	public static void resultado(List<String> nomes) {
 		System.out.println("#".repeat(10) + "[ Resultado ]" + "#".repeat(10) + "\n");
-		for (String nome : nomes) {
-			System.out.println("Nome: " + nome);
-		}
+		nomes.forEach(nome -> System.out.print("Nome: " + nome + "\n"));
+	}
+
+	public static void main(String[] args) {
+
+		// chamando a funcao e armazena na variavel nomes
+		List<String> nomes = capturaNomes();
+		resultado(nomes);
 	}
 
 ```
