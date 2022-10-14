@@ -136,6 +136,265 @@ public class Aluno {
   }
   
 }
+```
 
+### Exercicio E-commerce
+
+#### App.java
+
+```java
+	public static void main(String[] args) {
+		/*
+		 * Autor: Walter Paulo
+		 * Date: 13/10/2022
+		 * Exercise: 2 Programação Orientada a Objetos(POO) dia 13 - Desafio 21 dias em
+		 * Java
+		 * 
+		 * Carla precisa de um ecommerce, este e-commerce vai ter as seguintes funções
+		 * 
+		 * - Cadastro de produtos;
+		 * - Cadastro de cliente;
+		 * - Cadastro de peditos;
+		 * - Relatório de pedidos de clientes;
+		 * - Sair
+		 * 
+		 * 
+		 * Produto: (id, nome, descricao, preco);
+		 * Cliente: (id, nome, telefone, endereço)
+		 * Pedido: (id, clienteId, produto[], valorTotal())
+		 * 
+		 */
+		List<Pedido> pedidos = new ArrayList<>();
+		Scanner ler = new Scanner(System.in);
+		System.out.println("\n"+"-".repeat(10)+"[ Pedidos - Online ]"+"-".repeat(10));
+
+		do {
+
+			Pedido novo = new Pedido();
+			novo.setId(pedidos.size()+1);
+
+			Cliente cliente = new Cliente();
+			System.out.println("Digite o nome do Cliente:");
+			cliente.setNome(ler.next());
+
+			System.out.println("Digite o telefone:");
+			cliente.setTelefone(ler.next());
+
+			System.out.println("Digite o endereço:");
+			cliente.setEndereco(ler.next());
+
+			novo.setCliente(cliente);
+			System.out.println("\n"+"-".repeat(10) + "[ Produto ]" + "-".repeat(10));
+
+				do {
+
+					Produto produto = new Produto();
+					produto.setId(novo.getProdutos().size() + 1);
+					System.out.println("Digite o nome do produto:");
+					produto.setNome(ler.next());
+					System.out.println("Digite a descrição:");
+					produto.setDescricao(ler.next());
+					System.out.println("Digite o preço:");
+					produto.setPreco(ler.nextDouble());
+
+					novo.getProdutos().add(produto);
+					System.out.println("\n"+"-".repeat(10)+"[ Pedidos ]"+"-".repeat(10));
+					System.out.println("Adicionar outro produto?\n0 - para continuar\n1 - para fechar o carrinho");
+					int opcao = ler.nextInt();
+					if(opcao == 1)
+						break;
+				} while (true);
+				
+			pedidos.add(novo);
+			System.out.println("\n"+"-".repeat(10)+"[ Pedidos ]"+"-".repeat(10));
+			System.out.println("Adicionar outro pedido?\n0 - para continuar)\n1 - para sair");
+			int opcao = ler.nextInt();
+			if (opcao == 0)
+				continue;
+			if (opcao == 1){
+				break;
+			}
+		} while (true);
+
+		System.out.println("\n"+"-".repeat(10)+"[ Pedidos - Relatórios ]"+"-".repeat(10));
+		for(Pedido pedido : pedidos){
+			pedido.imprimirPedido();
+		}
+		System.out.println("-".repeat(10)+"[ fim ]"+"-".repeat(10));
+
+	}
+```
+
+#### Produto.java
+
+```java
+
+package br.com.unoinfo;
+
+public class Produto {
+  private int id;
+  private String nome;
+  private String descricao;
+  private double preco;
+  
+  public int getId() {
+    return id;
+  }
+  
+  public void setId(int id) {
+    this.id = id;
+  }
+  
+  public String getNome() {
+    return nome;
+  }
+ 
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
+  
+  public String getDescricao() {
+    return descricao;
+  }
+  
+  public void setDescricao(String descricao) {
+    this.descricao = descricao;
+  }
+  
+  public double getPreco() {
+    return preco;
+  }
+  
+  public void setPreco(double preco) {
+    this.preco = preco;
+  }
+
+}
+
+```
+
+#### Cliente.java
+
+```java
+package br.com.unoinfo;
+
+public class Cliente {
+  private String id;
+  private String nome;
+  private String telefone;
+  private String endereco;
+ 
+  public String getId() {
+    return id;
+  }
+ 
+  public void setId(String id) {
+    this.id = id;
+  }
+ 
+  public String getNome() {
+    if(this.nome == null)
+      this.nome = "Consumidor Não Identificado";
+    return nome;
+  }
+  
+  public void setNome(String nome) {
+    this.nome = nome;
+  }
+  
+  public String getTelefone() {
+    if(this.telefone == null)
+      this.telefone = "( )   -";
+    return telefone;
+  }
+  
+  public void setTelefone(String telefone) {
+    this.telefone = telefone;
+  }
+  
+  public String getEndereco() {
+    if(this.endereco == null)
+      this.endereco = " ";
+    return endereco;
+  }
+  
+  public void setEndereco(String endereco) {
+    this.endereco = endereco;
+  }
+}
+
+```
+
+#### Pedido.java
+
+```java
+package br.com.unoinfo;
+
+import java.text.DecimalFormat;
+import java.util.ArrayList;
+import java.util.List;
+
+public class Pedido {
+  private int id;
+  private Cliente cliente;
+  private List<Produto> produtos;
+  private double valorTotal;
+  
+  public int getId() {
+    return id;
+  }
+
+ 
+  public void setId(int id) {
+    this.id = id;
+  }
+ 
+  public Cliente getCliente() {
+    return cliente;
+  }
+  
+  public void setCliente(Cliente cliente) {
+    this.cliente = cliente;
+  }
+  
+  public List<Produto> getProdutos() {
+    if(this.produtos == null){
+      this.produtos = new ArrayList<Produto>();
+    }
+    return produtos;
+  }
+ 
+  public void setProdutos(List<Produto> produtos) {
+    this.produtos = produtos;
+  }
+  
+  public double getValorTotal() {
+    for(Produto produto : this.getProdutos()){
+      this.setValorTotal(produto.getPreco());
+    }
+    return valorTotal;
+  }
+  
+  public void setValorTotal(double valorTotal) {
+    this.valorTotal += valorTotal;
+  }
+
+  public void imprimirPedido(){
+    DecimalFormat moedaBr = new DecimalFormat("#,###,###,##0.00");
+				System.out.println("\nCódigo: "+this.getId() + "\n"
+        +"Consumidor:" + this.getCliente().getNome() + "\n"
+				+ "Telefone: " + this.getCliente().getTelefone() + "\n"
+				+ "Endereço: " + this.getCliente().getEndereco() + "\n");
+				
+				System.out.println("-".repeat(40) + "\nITEM     NOME     DESCRICAO     VALOR\n" + "-".repeat(40));
+				for (Produto prod : this.getProdutos()) {
+					System.out.println(prod.getId() + " ".repeat(4) + prod.getNome() + " ".repeat(4)
+					+ prod.getDescricao() + " ".repeat(4) + prod.getPreco());
+				}
+				System.out.println("\nQtd. Total de Itens" + " ".repeat(18) + this.produtos.size() + "");
+				System.out.println("Valor Total (R$)" + " ".repeat(20) + moedaBr.format(getValorTotal()) + "\n");
+  }
+
+}
 
 ```
