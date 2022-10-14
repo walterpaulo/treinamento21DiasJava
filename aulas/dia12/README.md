@@ -1,6 +1,6 @@
 ## Aula 12 - 14/10/2022 - [Desafio 21 dias em Java](../../README.md)
 
-### Função Rercusiva
+### Função Recursiva
 
 Usada para chamada da mesma função, seria um loop com um dispositivo de parada (recomendado).
 
@@ -11,4 +11,4 @@ adição de vários métodos com o mesmo nome, porém com assinaturas diferentes
 Herda métodos atritubos do tipo público e protegido da classe pai, ou seja, extensão da classe. Para invocar utiliza a palavra reservada, extends.
 
 ### Polimorfismo
-sobrescreve o método herdado, muda o comportamento e mantei o nome.  
+sobrescreve o método herdado, muda o comportamento e mantei o nome. 
