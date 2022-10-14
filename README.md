@@ -16,6 +16,7 @@
 - [Dia 9 - 11/10/2022](./aulas/dia9/README.md) - Array...
 - [Dia 10 - 12/10/2022](./aulas/dia10/README.md) - Funções...
 - [Dia 11 - 13/10/2022](./aulas/dia11/README.md) - Programação Orientada a Objetos (POO)
+- [Dia 12 - 14/10/2022](./aulas/dia12/README.md) - Funções recursiva
 
 
 <i> Comunidade Torne-se Um Programador
