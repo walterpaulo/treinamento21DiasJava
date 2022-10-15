@@ -1,6 +1,6 @@
 # Desafio 21 dias em Java
 - duração de 21 dias;
-- 1h 20 por aula(média);
+- 1h 40 por aula(média);
 - dedicados profissionais de TI;
 - mentor e professor, Danilo Aparecido;
 
@@ -17,6 +17,7 @@
 - [Dia 10 - 12/10/2022](./aulas/dia10/README.md) - Funções...
 - [Dia 11 - 13/10/2022](./aulas/dia11/README.md) - Programação Orientada a Objetos (POO)
 - [Dia 12 - 14/10/2022](./aulas/dia12/README.md) - Função recursiva...
+- [Dia 13 - 15/10/2022](./aulas/dia13/README.md) - Interface, Abstract, Enum...
 
 
 <i> Comunidade Torne-se Um Programador
