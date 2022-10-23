@@ -25,7 +25,9 @@
 - [Dia 18 - 20/10/2022](./aulas/dia18/README.md) - Documentação Swagger, front...
 - [Dia 19 - 21/10/2022](./aulas/dia19/README.md) - 
 - [Dia 20 - 22/10/2022](./aulas/dia20/README.md) - Aplicação Profissionais - SSR
+- [Dia 21 - 23/10/2022](./aulas/dia21/README.md) - Computação em Nuvem, Deploy...
 
+> Segue minhas anotações de estudos, recomendo o treinamento. Para mais informação acesse o link abaixo. 
 
 <i> Comunidade Torne-se Um Programador
 >O que posso aprender:
